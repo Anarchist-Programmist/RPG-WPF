@@ -1,0 +1,57 @@
+﻿<Window x:Class="rpg.Forest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:rpg"
+        mc:Ignorable="d"
+        Title="Forest" Height="450" Width="800"
+        MinHeight="450" MinWidth="800"
+        MaxHeight="450" MaxWidth="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/image/Forest.jpg"></ImageBrush>
+        </Grid.Background>
+        <Label>
+            <TextBlock Margin="86,60,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Foreground="White">
+                <Run Text="HP:"/>
+                <Run Text="{Binding HP}"/>
+            </TextBlock>
+        </Label>
+
+        <Label>
+            <TextBlock Margin="86,100,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Foreground="White">
+                <Run Text="Mana:"/>
+                <Run Text="{Binding Mana}"/>
+            </TextBlock>
+        </Label>
+
+        <Label>
+            <TextBlock Margin="86,140,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Foreground="White">
+                <Run Text="Level:"/>
+                <Run Text="{Binding Level}"/>
+            </TextBlock>
+        </Label>
+
+        <Label>
+            <TextBlock Margin="86,180,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Foreground="White">
+                <Run Text="XP: "/>
+                <Run Text="{Binding XP}"/>
+                <Run Text="/"/>
+                <Run Text="{Binding MinXp}"/>
+            </TextBlock>
+        </Label>
+
+        <Label>
+            <TextBlock Margin="86,220,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Foreground="White">
+                <Run Text="Gold:"/>
+                <Run Text="{Binding Gold}"/>
+            </TextBlock>
+        </Label>
+
+        <Label Margin="400,48,0,0" Content="&#x9;Вы попали в лес. &#xD;&#xA;Тут обитают волки и разбойники" VerticalAlignment="Top" FontSize="20" Height="72" Width="348" HorizontalAlignment="Left" VerticalContentAlignment="Stretch" Foreground="White"/>
+        <Button Click="StartOneFight" Margin="65,300,490,45" Background="#FFDDDDDD" Content="Дать бой " FontSize="24"/>
+        <Button Click="GoToTower" Margin="452,300,103,45" Content="Пойти в башню мага" FontSize="22" Background="#FFDDDDDD"/>
+        <Button Click="GoToDragon" Margin="452,157,104,187" Content="Пойти в логово дракона" FontSize="20" Background="#FFDDDDDD"/>
+    </Grid>
+</Window>
